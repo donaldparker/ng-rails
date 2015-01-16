@@ -18,15 +18,6 @@ class ClubsController < ApplicationController
     render json: @club
   end
 
-  # # GET /clubs/new
-  # def new
-  #   @club = Club.new
-  # end
-
-  # # GET /clubs/1/edit
-  # def edit
-  # end
-
   # POST /clubs
   # POST /clubs.json
   def create
