@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  scope '/api' do
+  root 'home#index'
+  scope '/api/' do
     resources :teams, :except => [:new, :edit]
     resources :clubs, :except => [:new, :edit]
   end
+  # match "*path", to: redirect('/'), via: :all
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

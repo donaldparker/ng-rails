@@ -26,9 +26,14 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'angular_rails_csrf'
+
 gem 'rails-assets-bootstrap'
 gem 'rails-assets-angular'
 gem 'rails-assets-ng-file-upload'
+
+gem 'devise'
+gem 'haml-rails', '~> 0.7.0'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

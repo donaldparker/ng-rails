@@ -2,6 +2,7 @@ class TeamsController < ApplicationController
   layout false
   respond_to :json
   before_action :set_team, only: [:show, :edit, :update, :destroy]
+  before_filter :intercept_html_requests
 
   # GET /teams
   # GET /teams.json

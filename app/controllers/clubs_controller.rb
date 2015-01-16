@@ -3,6 +3,7 @@ class ClubsController < ApplicationController
   layout false
   respond_to :json
   before_action :set_club, only: [:show, :edit, :update, :destroy]
+  before_filter :intercept_html_requests
 
   # GET /clubs
   # GET /clubs.json
