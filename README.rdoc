@@ -6,4 +6,8 @@ Stuff used:
 
 * Rails 4.1.5
 
+* HAML 0.7.0
+
 * Angular 1.2
+
+* Bootstrap 3.3.2

@@ -1,0 +1,47 @@
+#= depend_on_asset 'about.html'
+#= depend_on_asset 'contact.html'
+#= depend_on_asset 'home.html'
+#= depend_on_asset 'login.html'
+#= depend_on_asset 'service.html'
+#= depend_on_asset 'signup.html'
+
+
+angular.module('com.donaldparker', ['ngRoute'])
+.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
+	$locationProvider.html5Mode(true);
+	$routeProvider.when('/about', {templateUrl:'<%= asset_path("about.html") %>', controller:'com.donaldparker.controllers.AboutPageCtrl'});
+	$routeProvider.when('/contact', {templateUrl:'<%= asset_path("contact.html") %>', controller:'com.donaldparker.controllers.ContactPageCtrl'});
+	$routeProvider.when('/log-in', {templateUrl:'<%= asset_path("login.html") %>', controller:'com.donaldparker.controllers.SingInPageCtrl'})
+	$routeProvider.when('/services', {templateUrl:'<%= asset_path("service.html") %>', controller:'com.donaldparker.controllers.ServicePageCtrl'});
+	$routeProvider.when('/sign-up', {templateUrl:'<%= asset_path("signup.html") %>', controller:'com.donaldparker.controllers.SingUpPageCtrl'})
+	$routeProvider.when('/', {templateUrl:'<%= asset_path("home.html") %>', controller:'com.donaldparker.controllers.HomePageCtrl'})
+	$routeProvider.otherwise({redirectTo: '/'});
+}])
+.controller('com.donaldparker.controllers.AppCtrl', ['$scope', '$location', function($scope, $location){
+	console.log('application controller');
+
+	$scope.goTo = function(url, data){
+		$location.path(url);
+	}
+}])
+.controller('com.donaldparker.controllers.HomePageCtrl', ['$scope', function($scope){
+	console.log('HomePageCtrl');
+}])
+.controller('com.donaldparker.controllers.AboutPageCtrl', ['$scope', function($scope){
+	console.log('AboutPageCtrl');
+}])
+.controller('com.donaldparker.controllers.ServicePageCtrl', ['$scope', function($scope){
+	console.log('ServicePageCtrl');
+}])
+.controller('com.donaldparker.controllers.ContactPageCtrl', ['$scope', function($scope){
+	console.log('ContactPageCtrl');
+}])
+.controller('com.donaldparker.controllers.SingInPageCtrl', ['$scope', function($scope){
+	console.log('SingInPageCtrl');
+}])
+.controller('com.donaldparker.controllers.SingUpPageCtrl', ['$scope', function($scope){
+	console.log('SingUpPageCtrl');
+}])
+
+
+;

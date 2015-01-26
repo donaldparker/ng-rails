@@ -27,9 +27,12 @@ gem 'spring',        group: :development
 
 gem 'angular_rails_csrf'
 
-gem 'rails-assets-bootstrap'
-gem 'rails-assets-angular'
+gem 'rails-assets-bootstrap', '3.3.2'
+gem 'rails-assets-angular', '1.3.9'
+gem 'rails-assets-angular-route', '1.3.9'
+gem 'rails-assets-angular-bootstrap'
 gem 'rails-assets-ng-file-upload'
+gem 'rails-assets-60fps-scroll'
 
 gem 'devise'
 gem 'haml-rails', '~> 0.7.0'

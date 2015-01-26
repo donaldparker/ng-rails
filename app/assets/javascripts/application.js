@@ -13,7 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap
+
 //= require angular 
+//= require angular-bootstrap
+//= require angular-route
 //= require ng-file-upload
+
 //= require_tree .

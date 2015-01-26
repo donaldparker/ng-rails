@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   scope '/api/' do
     resources :teams, :except => [:new, :edit]
     resources :clubs, :except => [:new, :edit]
+    #get ':controller/:action/:id/with_user/:user_id'
   end
+
+  match '*catchall', to: 'home#index', via: [:get, :post]
   # match "*path", to: redirect('/'), via: :all
 
   # The priority is based upon order of creation: first created -> highest priority.

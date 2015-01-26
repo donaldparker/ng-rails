@@ -1,10 +1,15 @@
 !!!
-%html
+%html{ng:{app:'com.donaldparker'}}
   %head
-    %title Ngrails
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    %title ng-rails
+    %meta{charset:'utf-8'}
+    %base{href:'/'}
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  %body
-    = yield
-
+  %body{ng:{controller:'com.donaldparker.controllers.AppCtrl'}}
+    = render 'layouts/primary_nav'
+    .container
+      / = yield
+      %div{ng:{view:true}}
+    = render 'layouts/primary_footer'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
