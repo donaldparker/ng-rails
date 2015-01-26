@@ -1,6 +1,6 @@
 == README
 
-This project is still in development, it's intention is become boiler plate code to be used in future tutorials
+This project is still in development
 
 Stuff used:
 
